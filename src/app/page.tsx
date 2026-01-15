@@ -94,12 +94,12 @@ const DemoCarousel = () => (
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-950 text-slate-300 font-body">
-      <div className="absolute inset-0 -z-0 h-full w-full bg-gradient-to-b from-slate-950 to-emerald-950">
-        <div className="absolute inset-0 bg-[url(/grid.svg)] bg-repeat [mask-image:linear-gradient(to_bottom,white_30%,transparent_90%)]"></div>
+    <div className="flex min-h-screen flex-col bg-emerald-950 text-slate-300 font-body">
+      <div className="absolute inset-0 -z-0 h-full w-full bg-emerald-950">
+        <div className="absolute inset-0 bg-[url(/grid.svg)] bg-white/5 [mask-image:linear-gradient(to_bottom,white_30%,transparent_90%)]"></div>
       </div>
       
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/30 px-4 py-3 backdrop-blur-md sm:px-6">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-emerald-950/30 px-4 py-3 backdrop-blur-md sm:px-6">
         <div className="container mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold">
             <Logo className="h-7 w-7 text-emerald-500" />
@@ -120,7 +120,7 @@ export default function LandingPage() {
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 md:text-xl tracking-wide">
             A consistency engine for developers. One meaningful commit a day. No excuses. No grace days.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-emerald-500 text-slate-950 font-bold shadow-lg shadow-emerald-500/20 hover:bg-emerald-400 transition-all">
+          <Button asChild size="lg" className="mt-8 bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/20 hover:bg-emerald-500 transition-all">
             <Link href="/dashboard">
               <GitCommit className="mr-2" />
               Connect GitHub to Enter
@@ -163,7 +163,7 @@ export default function LandingPage() {
         </AnimatedSection>
 
         {/* The Ranks Section */}
-        <AnimatedSection as="section" className="bg-slate-950/50 py-20 sm:py-28">
+        <AnimatedSection as="section" className="bg-emerald-950/50 py-20 sm:py-28">
           <div className="container mx-auto flex flex-col items-center text-center">
              <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-white">
               The Ranks
