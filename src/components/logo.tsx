@@ -11,6 +11,11 @@ export function Logo({ className }: { className?: string }) {
       className={cn('text-primary', className)}
     >
       <rect width="36" height="36" fill="currentColor" />
+      <path
+        d="M12 0V36M24 0V36M0 12H36M0 24H36"
+        stroke="hsl(var(--background))"
+        strokeWidth="2"
+      />
     </svg>
   );
 }
