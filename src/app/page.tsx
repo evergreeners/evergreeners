@@ -1,15 +1,20 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ActivityHeatmap } from '@/components/dashboard/activity-heatmap';
-import { mockActivity } from '@/lib/mock-data';
-import { Leaf, GitCommit, Target, BarChart4 } from 'lucide-react';
+import { Leaf, GitCommit, Target, BarChart4, TrendingUp, Award } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 
 const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
-  <div className="flex flex-col items-center p-6 text-center">
-    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+  <div className="flex flex-col items-center p-6 text-center transition-transform transform hover:scale-105 duration-300">
+    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
       {icon}
     </div>
     <h3 className="mb-2 text-xl font-semibold">{title}</h3>
@@ -17,9 +22,70 @@ const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, titl
   </div>
 );
 
-export default function LandingPage() {
-  const dashboardImage = PlaceHolderImages.find(img => img.id === 'dashboard-demo-1');
+const DemoCarousel = () => (
+    <Carousel className="w-full max-w-4xl mx-auto" opts={{ loop: true }}>
+        <CarouselContent>
+            <CarouselItem>
+                <div className="p-1">
+                    <Card className="shadow-2xl overflow-hidden">
+                        <CardContent className="flex flex-col items-center justify-center p-6 bg-card">
+                            <h3 className="text-2xl font-bold text-primary mb-4">Visualize Your Activity</h3>
+                            <p className="text-center text-muted-foreground mb-6">See your entire year of contributions at a glance with a detailed heatmap.</p>
+                            <Image
+                                src="https://picsum.photos/seed/heatmap-demo/1000/600"
+                                alt="Activity Heatmap"
+                                width={1000}
+                                height={600}
+                                className="rounded-lg border"
+                                data-ai-hint="data visualization graph"
+                            />
+                        </CardContent>
+                    </Card>
+                </div>
+            </CarouselItem>
+            <CarouselItem>
+                <div className="p-1">
+                    <Card className="shadow-2xl overflow-hidden">
+                        <CardContent className="flex flex-col items-center justify-center p-6 bg-card">
+                            <h3 className="text-2xl font-bold text-primary mb-4">Track Your Streaks</h3>
+                             <p className="text-center text-muted-foreground mb-6">Stay motivated by building your commit streak. Every day counts!</p>
+                            <Image
+                                src="https://picsum.photos/seed/streaks-demo/1000/600"
+                                alt="Streaks Cards"
+                                width={1000}
+                                height={600}
+                                className="rounded-lg border"
+                                data-ai-hint="dashboard stats cards"
+                            />
+                        </CardContent>
+                    </Card>
+                </div>
+            </CarouselItem>
+            <CarouselItem>
+                <div className="p-1">
+                     <Card className="shadow-2xl overflow-hidden">
+                        <CardContent className="flex flex-col items-center justify-center p-6 bg-card">
+                            <h3 className="text-2xl font-bold text-primary mb-4">Set and Conquer Goals</h3>
+                             <p className="text-center text-muted-foreground mb-6">Define what success looks like for you and track your progress towards it.</p>
+                            <Image
+                                src="https://picsum.photos/seed/goals-demo/1000/600"
+                                alt="Goals Page"
+                                width={1000}
+                                height={600}
+                                className="rounded-lg border"
+                                data-ai-hint="task list progress"
+                            />
+                        </CardContent>
+                    </Card>
+                </div>
+            </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious className="ml-12" />
+        <CarouselNext className="mr-12"/>
+    </Carousel>
+);
 
+export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b bg-background/80 px-4 py-3 backdrop-blur-sm sm:px-6">
@@ -37,40 +103,27 @@ export default function LandingPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="container mx-auto flex flex-col items-center px-4 py-20 text-center sm:py-28">
+           <div className="mb-4 rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">
+            From little commits, big things grow.
+          </div>
           <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
             Cultivate Your Coding Forest
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-            Evergreeners helps you visualize your GitHub activity, build consistent coding habits, and watch your skills grow, one commit at a time.
+            Evergreeners transforms your GitHub activity into a living garden. Visualize your progress, build consistent habits, and watch your skills flourish.
           </p>
-          <Button asChild size="lg" className="mt-8">
+          <Button asChild size="lg" className="mt-8 animate-pulse">
             <Link href="/dashboard">
               <GitCommit className="mr-2" />
-              Start Growing Today
+              Start Growing Your Forest
             </Link>
           </Button>
         </section>
 
-        {/* Demo Section */}
+        {/* Animated Demo Section */}
         <section className="bg-muted/50 py-16 sm:py-24">
           <div className="container mx-auto">
-            <div className="mx-auto max-w-4xl">
-              <Card className="shadow-2xl transition-all duration-300 hover:shadow-primary/20">
-                <CardContent className="p-2 sm:p-4">
-                  {dashboardImage && (
-                    <Image
-                      src={dashboardImage.imageUrl}
-                      alt="Evergreeners dashboard demo"
-                      width={1200}
-                      height={780}
-                      className="rounded-lg border"
-                      data-ai-hint={dashboardImage.imageHint}
-                      priority
-                    />
-                  )}
-                </CardContent>
-              </Card>
-            </div>
+            <DemoCarousel />
           </div>
         </section>
 
@@ -82,24 +135,24 @@ export default function LandingPage() {
               Everything You Need to Stay Evergreen
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Powerful tools to help you maintain your coding momentum.
+              Powerful tools designed to nurture your coding momentum.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <FeatureCard
-              icon={<BarChart4 size={28} />}
+              icon={<BarChart4 size={32} />}
               title="Visualize Your Growth"
               description="See your commit history come to life with an interactive contribution graph and insightful charts."
             />
             <FeatureCard
-              icon={<Target size={28} />}
-              title="Set and Track Goals"
-              description="Define meaningful goals, like commit streaks or contributions to new projects, and monitor your progress."
-            />
-            <FeatureCard
-              icon={<GitCommit size={28} />}
+              icon={<TrendingUp size={32} />}
               title="Build Your Streak"
-              description="Stay motivated by building and maintaining your daily commit streak. We celebrate every contribution!"
+              description="Stay motivated by building and maintaining your daily commit streak. We celebrate every single contribution!"
+            />
+             <FeatureCard
+              icon={<Award size={32} />}
+              title="Set & Track Goals"
+              description="Define meaningful goals—from commit streaks to new projects—and visually track your journey to achieving them."
             />
           </div>
         </section>
@@ -108,10 +161,10 @@ export default function LandingPage() {
         <section className="bg-primary/5 py-20 sm:py-28">
           <div className="container mx-auto flex flex-col items-center text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
-              Ready to Grow?
+              Ready to See Your Forest Grow?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-              Connect your GitHub account in seconds and start your journey to becoming an Evergreener. It's free!
+              Connect your GitHub account in seconds. It's free and open-source. Start your journey to becoming an Evergreener today.
             </p>
             <Button asChild size="lg" className="mt-8">
               <Link href="/dashboard">
