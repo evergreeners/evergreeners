@@ -30,7 +30,7 @@ export function SidebarNav() {
         <div className="flex items-center gap-2">
           <Logo className="h-8 w-8 text-primary" />
           <div className="flex flex-col">
-            <h2 className="font-headline text-lg font-semibold text-primary">Evergreeners</h2>
+            <h2 className="text-lg font-semibold text-primary">Evergreeners</h2>
           </div>
         </div>
       </SidebarHeader>

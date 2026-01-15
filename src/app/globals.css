@@ -36,7 +36,7 @@
  
     --radius: 0.375rem; /* 6px (GitHub's standard radius) */
     
-    --git-0: 220 14% 93%; /* #ebeef0 */
+    --git-0: 220 14% 93%; /* #ebedf0 */
     --git-1: 137 45% 82%; /* #9be9a8 */
     --git-2: 135 55% 61%; /* #40c463 */
     --git-3: 134 62% 45%; /* #30a14e */
@@ -83,6 +83,7 @@
     /* RING: #2ea043 (Focus Ring Green) */
     --ring: 131 55% 40%;
     
+    /* Contribution graph colors for dark mode */
     --git-0: 215 21% 11%; /* #161b22 */
     --git-1: 134 62% 16%; /* #0e4429 */
     --git-2: 135 100% 20%; /* #006d32 */
