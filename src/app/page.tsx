@@ -96,7 +96,7 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-emerald-950 text-slate-300 font-body">
       <div className="absolute inset-0 -z-0 h-full w-full bg-emerald-950">
-        <div className="absolute inset-0 bg-[url(/grid.svg)] bg-white/5 [mask-image:linear-gradient(to_bottom,white_30%,transparent_90%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       </div>
       
       <header className="sticky top-0 z-50 border-b border-white/10 bg-emerald-950/30 px-4 py-3 backdrop-blur-md sm:px-6">
@@ -120,7 +120,7 @@ export default function LandingPage() {
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 md:text-xl tracking-wide">
             A consistency engine for developers. One meaningful commit a day. No excuses. No grace days.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/20 hover:bg-emerald-500 transition-all">
+          <Button asChild size="lg" className="mt-8 bg-emerald-500 text-emerald-950 font-bold hover:bg-emerald-400 transition-all">
             <Link href="/dashboard">
               <GitCommit className="mr-2" />
               Connect GitHub to Enter
@@ -192,4 +192,3 @@ export default function LandingPage() {
       </footer>
     </div>
   );
-}
