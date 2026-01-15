@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/landing/animated-section';
 import { Logo } from '@/components/logo';
+import { Sprout, GitCommitVertical, Trees, Mountain } from 'lucide-react';
 
 const rules = [
   {
@@ -19,10 +20,10 @@ const rules = [
 ];
 
 const ranks = [
-  { name: 'Sprout', days: 7, color: 'text-lime-500' },
-  { name: 'Sapling', days: 30, color: 'text-green-500' },
-  { name: 'Evergreen', days: 90, color: 'text-emerald-500' },
-  { name: 'Redwood', days: 180, color: 'text-teal-400' },
+  { name: 'Sprout', days: 7, color: 'text-lime-500', icon: Sprout },
+  { name: 'Sapling', days: 30, color: 'text-green-500', icon: GitCommitVertical },
+  { name: 'Evergreen', days: 90, color: 'text-emerald-500', icon: Trees },
+  { name: 'Redwood', days: 180, color: 'text-teal-400', icon: Mountain },
 ];
 
 export default function LandingPage() {
@@ -80,13 +81,15 @@ export default function LandingPage() {
                 <div className="mt-12">
                   <div className="relative">
                       {/* Timeline bar */}
-                      <div className="absolute left-0 top-1/2 w-full h-0.5 bg-border -translate-y-1/2"></div>
+                      <div className="absolute left-8 right-8 top-5 h-0.5 bg-border -translate-y-1/2"></div>
                       
-                      <div className="flex justify-between">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                           {ranks.map((rank, index) => (
                               <div key={index} className="relative flex flex-col items-center">
                                   {/* Dot on timeline */}
-                                  <div className="w-4 h-4 bg-background rounded-full border-2 border-border"></div>
+                                  <div className="w-10 h-10 bg-background rounded-full border-2 border-border flex items-center justify-center z-10">
+                                    <rank.icon className={`w-5 h-5 ${rank.color}`} />
+                                  </div>
                                   
                                   {/* Rank Info */}
                                   <div className="mt-4 text-center">
