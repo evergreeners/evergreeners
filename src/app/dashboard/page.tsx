@@ -37,16 +37,16 @@ export default function DashboardPage() {
           ))}
         </div>
         
+        <AssignedTasks />
+
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
           <div className="lg:col-span-3">
              <ActivityHeatmap activity={mockActivity} />
           </div>
           <div className="lg:col-span-2">
-            <AssignedTasks />
+            <ActivityCharts activity={mockActivity} />
           </div>
         </div>
-
-        <ActivityCharts activity={mockActivity} />
       </div>
     </AppLayout>
   );
