@@ -65,6 +65,13 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        git: {
+          0: "#161b22", // Empty (Dark Mode)
+          1: "#0e4429", // Low
+          2: "#006d32", // Medium
+          3: "#26a641", // High
+          4: "#39d353", // Exploding (The brightest green)
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',

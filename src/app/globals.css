@@ -4,67 +4,86 @@
 
 @layer base {
   :root {
-    /* LIGHT MODE (Clean White/Green) */
-    --background: 150 30% 98%; /* Mint-ish White */
-    --foreground: 164 100% 10%; /* Dark Green Text */
-    --card: 0 0% 100%;
-    --card-foreground: 164 100% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 164 100% 10%;
-    --primary: 158 64% 52%; /* Emerald 500 */
-    --primary-foreground: 144 100% 10%;
-    --secondary: 150 30% 90%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 150 10% 90%;
-    --muted-foreground: 150 10% 40%;
-    --accent: 150 30% 90%;
-    --accent-foreground: 164 100% 10%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 150 20% 90%;
-    --input: 150 20% 90%;
-    --ring: 158 64% 52%;
-    --radius: 0.5rem;
-  }
+    /* LIGHT MODE (Classic GitHub White) */
+    --background: 0 0% 100%;       /* #ffffff */
+    --foreground: 216 28% 7%;      /* #0d1117 (Almost black) */
 
+    --card: 0 0% 100%;
+    --card-foreground: 216 28% 7%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 28% 7%;
+ 
+    /* GitHub "Success" Green (Light Mode) */
+    --primary: 134 62% 41%;
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 220 14% 96%;         /* #f6f8fa */
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 213 27% 84%;         /* #d0d7de */
+    --input: 213 27% 84%;
+    --ring: 134 61% 41%;
+ 
+    --radius: 0.375rem; /* 6px (GitHub's standard radius) */
+  }
+ 
   .dark {
-    /* DARK MODE (Your "Deep Forest" Choice) */
-    --background: 164 90% 9%;  /* #022c22 - DEEP EMERALD (Not Black!) */
-    --foreground: 150 30% 98%; /* Mint White */
+    /* EVERGREEN DARK MODE (GitHub Dark Dimmed + High Contrast) */
     
-    /* Cards - Slightly lighter green, NOT slate/blue */
-    --card: 165 85% 12%;       /* #03382d */
-    --card-foreground: 150 30% 98%;
+    /* Background: #0d1117 (GitHub Dark Bg) */
+    --background: 216 28% 7%;      
+    /* Text: #e6edf3 (GitHub Light Text) */
+    --foreground: 210 29% 93%;     
+
+    /* Card/Sidebar: #161b22 (GitHub Panel Bg) */
+    --card: 215 21% 11%;           
+    --card-foreground: 210 29% 93%;
+ 
+    --popover: 215 21% 11%;
+    --popover-foreground: 210 29% 93%;
+ 
+    /* PRIMARY: #238636 (GitHub Green Button) */
+    --primary: 134 62% 41%; 
+    --primary-foreground: 0 0% 100%; /* White text on green button */
+ 
+    /* SECONDARY: #21262d (GitHub Secondary Button) */
+    --secondary: 214 15% 15%; 
+    --secondary-foreground: 210 29% 93%;
+ 
+    /* MUTED: #30363d (Borders/Subtle) */
+    --muted: 213 12% 21%;
+    --muted-foreground: 212 11% 55%; /* #8b949e */
+ 
+    --accent: 213 12% 21%;         /* Hover state on lists */
+    --accent-foreground: 210 29% 93%;
+ 
+    --destructive: 348 88% 39%;    /* #a40e26 */
+    --destructive-foreground: 210 40% 98%;
+ 
+    /* BORDER: #30363d (Standard GitHub Dark Border) */
+    --border: 213 12% 21%;
+    --input: 213 12% 21%;
     
-    --popover: 165 85% 12%;
-    --popover-foreground: 150 30% 98%;
-    
-    --primary: 158 64% 52%;    /* Emerald 500 */
-    --primary-foreground: 144 100% 5%;
-    
-    --secondary: 165 60% 15%;
-    --secondary-foreground: 150 30% 98%;
-    
-    --muted: 165 60% 15%;
-    --muted-foreground: 150 20% 65%;
-    
-    --accent: 165 60% 20%;
-    --accent-foreground: 150 30% 98%;
-    
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 150 30% 98%;
-    
-    --border: 165 60% 20%;
-    --input: 165 60% 20%;
-    --ring: 158 64% 52%;
+    /* RING: #2ea043 (Focus Ring Green) */
+    --ring: 131 55% 40%;
   }
 }
-
+ 
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-emerald-950 text-foreground;
   }
 }
