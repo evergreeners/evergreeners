@@ -4,7 +4,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Flame, Zap, GitCommit, CalendarDays, Award } from 'lucide-react';
+import { Flame, Award, GitCommit, CalendarDays } from 'lucide-react';
 
 const iconMap = {
   "Current Streak": <Flame className="h-5 w-5 text-orange-400" />,
