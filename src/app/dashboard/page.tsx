@@ -4,7 +4,6 @@ import { calculateStreaks } from '@/lib/streaks';
 import { StreaksCard } from '@/components/dashboard/streaks-card';
 import { ActivityCharts } from '@/components/dashboard/activity-charts';
 import { ActivityHeatmap } from '@/components/dashboard/activity-heatmap';
-import { InsightEngine } from '@/components/dashboard/insight-engine';
 
 export const metadata = {
   title: 'Dashboard | Evergreeners',
@@ -34,10 +33,6 @@ export default function DashboardPage() {
           <div className="lg:col-span-2">
             <ActivityCharts activity={mockActivity} />
           </div>
-        </div>
-
-        <div>
-          <InsightEngine activity={mockActivity} />
         </div>
       </div>
     </AppLayout>
