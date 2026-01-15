@@ -9,10 +9,11 @@ import {
   SidebarMenuButton,
 } from '../ui/sidebar';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { Home, Leaf, Settings, Target } from 'lucide-react';
+import { Home, Settings, Target } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '../ui/separator';
 import { mockUser } from '@/lib/mock-data';
+import { Logo } from '../logo';
 
 const menuItems = [
   { href: '/dashboard', label: 'Dashboard', icon: Home },
@@ -27,7 +28,7 @@ export function SidebarNav() {
     <>
       <SidebarHeader>
         <div className="flex items-center gap-2">
-          <Leaf className="h-8 w-8 text-primary" />
+          <Logo className="h-8 w-8 text-primary" />
           <div className="flex flex-col">
             <h2 className="font-headline text-lg font-semibold text-primary">Evergreeners</h2>
           </div>

@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Logo } from '@/components/logo';
 
 
 const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
@@ -91,7 +92,7 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 border-b bg-background/80 px-4 py-3 backdrop-blur-sm sm:px-6">
         <div className="container mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold">
-            <Leaf className="h-7 w-7 text-primary" />
+            <Logo className="h-7 w-7 text-primary" />
             <span className="font-headline text-xl text-primary">Evergreeners</span>
           </Link>
           <Button asChild>
@@ -178,7 +179,7 @@ export default function LandingPage() {
       <footer className="border-t">
         <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6">
           <div className="flex items-center gap-2">
-            <Leaf className="h-5 w-5 text-muted-foreground" />
+            <Logo className="h-5 w-5 text-muted-foreground" />
             <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Evergreeners. All rights reserved.</p>
           </div>
         </div>
