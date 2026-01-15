@@ -15,7 +15,7 @@
     --popover-foreground: 216 28% 7%;
  
     /* GitHub "Success" Green (Light Mode) */
-    --primary: 134 62% 41%;
+    --primary: 134 62% 36%;        /* #238636 */
     --primary-foreground: 0 0% 100%;
  
     --secondary: 210 40% 96.1%;
@@ -38,7 +38,7 @@
   }
  
   .dark {
-    /* EVERGREEN DARK MODE (GitHub Dark Dimmed + High Contrast) */
+    /* GITHUB DARK MODE */
     
     /* Background: #0d1117 (GitHub Dark Bg) */
     --background: 216 28% 7%;      
@@ -53,7 +53,7 @@
     --popover-foreground: 210 29% 93%;
  
     /* PRIMARY: #238636 (GitHub Green Button) */
-    --primary: 134 62% 41%; 
+    --primary: 134 62% 36%; 
     --primary-foreground: 0 0% 100%; /* White text on green button */
  
     /* SECONDARY: #21262d (GitHub Secondary Button) */
@@ -84,6 +84,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-emerald-950 text-foreground;
+    @apply bg-background text-foreground;
   }
 }
