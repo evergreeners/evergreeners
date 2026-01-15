@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   title: 'Evergreeners',
   description: 'Track your GitHub activity and grow your coding habits.',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
   }
 };
 
@@ -20,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
