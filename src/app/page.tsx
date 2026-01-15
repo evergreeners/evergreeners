@@ -13,6 +13,7 @@ import {
 import { Logo } from '@/components/logo';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { AnimatedSection } from '@/components/landing/animated-section';
 
 
 const RuleCard = ({ icon, title, description, isWarning }: { icon: React.ReactNode, title: string, description: string, isWarning?: boolean }) => (
@@ -135,7 +136,7 @@ export default function LandingPage() {
         </section>
 
         {/* The Rules Section */}
-        <section className="container mx-auto px-4 py-20 sm:py-28">
+        <AnimatedSection as="section" className="container mx-auto px-4 py-20 sm:py-28">
           <div className="text-center mb-16">
              <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-white">
               The Laws of the System
@@ -159,10 +160,10 @@ export default function LandingPage() {
               description="The calendar resets every 30 days. Your streak resets, but your 'Perennial' records remain."
             />
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* The Ranks Section */}
-        <section className="bg-slate-950/50 py-20 sm:py-28">
+        <AnimatedSection as="section" className="bg-slate-950/50 py-20 sm:py-28">
           <div className="container mx-auto flex flex-col items-center text-center">
              <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-white">
               The Ranks
@@ -179,7 +180,7 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
       </main>
 
       <footer className="border-t border-white/10">
