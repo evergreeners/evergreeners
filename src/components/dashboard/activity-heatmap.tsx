@@ -29,7 +29,6 @@ export function ActivityHeatmap({ activity }: ActivityHeatmapProps) {
     return 'bg-git-4';
   };
   
-  const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const months = Array.from({ length: 12 }, (_, i) => format(new Date(today.getFullYear(), i, 1), 'MMM'));
 
 
@@ -42,18 +41,18 @@ export function ActivityHeatmap({ activity }: ActivityHeatmapProps) {
       <CardContent>
         <TooltipProvider>
           <div className="flex gap-2">
-            <div className="flex flex-col justify-around text-xs text-muted-foreground">
+            <div className="flex flex-col justify-around pt-8 text-xs text-muted-foreground">
               {['', 'Mon', '', 'Wed', '', 'Fri', ''].map((day, i) => (
                 <div key={i}>{day}</div>
               ))}
             </div>
             <div className="w-full overflow-x-auto">
-              <div className="flex justify-between text-xs text-muted-foreground">
+              <div className="flex justify-between pl-1 text-xs text-muted-foreground">
                 {months.map((month) => (
-                  <div key={month} className="w-1/12 text-center">{month}</div>
+                  <div key={month} className="w-full text-left">{month}</div>
                 ))}
               </div>
-              <div className="grid grid-flow-col grid-rows-7 gap-1">
+              <div className="grid grid-flow-col grid-rows-7 gap-1 pt-2">
                 {Array.from({ length: firstDayOfMonth }).map((_, index) => (
                   <div key={`empty-${index}`} />
                 ))}
