@@ -4,6 +4,7 @@ import { calculateStreaks } from '@/lib/streaks';
 import { StreaksCard } from '@/components/dashboard/streaks-card';
 import { ActivityCharts } from '@/components/dashboard/activity-charts';
 import { ActivityHeatmap } from '@/components/dashboard/activity-heatmap';
+import { AnimatedSection } from '@/components/landing/animated-section';
 
 export const metadata = {
   title: 'Dashboard | Evergreeners',
@@ -11,6 +12,14 @@ export const metadata = {
 
 export default function DashboardPage() {
   const { currentStreak, longestStreak } = calculateStreaks(mockActivity);
+  const totalCommits = mockActivity.reduce((acc, a) => acc + a.count, 0);
+
+  const cards = [
+    { title: 'Current Streak', value: currentStreak, unit: 'days' },
+    { title: 'Longest Streak', value: longestStreak, unit: 'days' },
+    { title: 'Total Commits', value: totalCommits, unit: 'this year' },
+    { title: 'Busiest Day', value: 'Wednesday', unit: 'this year' },
+  ];
 
   return (
     <AppLayout>
@@ -20,10 +29,11 @@ export default function DashboardPage() {
         </h1>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <StreaksCard title="Current Streak" value={currentStreak} unit="days" />
-          <StreaksCard title="Longest Streak" value={longestStreak} unit="days" />
-          <StreaksCard title="Total Commits" value={mockActivity.reduce((acc, a) => acc + a.count, 0)} unit="this year" />
-          <StreaksCard title="Busiest Day" value="Wednesday" unit="this year" />
+          {cards.map((card, index) => (
+            <AnimatedSection key={card.title} as="div" className={`transition-all duration-300`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <StreaksCard title={card.title as any} value={card.value} unit={card.unit} />
+            </AnimatedSection>
+          ))}
         </div>
         
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
