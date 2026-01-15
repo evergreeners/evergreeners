@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/landing/animated-section';
 import { Logo } from '@/components/logo';
-import { Sprout, GitCommitVertical, Trees, Mountain } from 'lucide-react';
+import { Sprout, GitCommitVertical, Trees, Mountain, Github } from 'lucide-react';
 
 const rules = [
   {
@@ -108,6 +108,12 @@ export default function LandingPage() {
 
       <footer className="py-6 text-center text-sm text-muted-foreground">
         <p>&copy; {new Date().getFullYear()} Evergreeners. All rights reserved.</p>
+        <div className="flex items-center justify-center mt-2">
+            <Link href="https://github.com/evergreeners" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+        </div>
       </footer>
     </div>
   );
