@@ -8,10 +8,7 @@ export const metadata: Metadata = {
   title: 'Evergreeners',
   description: 'Track your GitHub activity and grow your coding habits.',
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
-      { url: '/logo.svg', type: 'image/svg+xml' },
-    ],
+    icon: '/logo.svg',
     apple: '/apple-touch-icon.png',
   }
 };
