@@ -19,12 +19,10 @@ const rules = [
 ];
 
 const ranks = [
-  { name: 'Seedling', days: 0, color: 'text-gray-400' },
   { name: 'Sprout', days: 7, color: 'text-lime-500' },
-  { name: 'Sapling', days: 14, color: 'text-green-500' },
-  { name: 'Evergreen', days: 30, color: 'text-emerald-500' },
-  { name: 'Redwood', days: 100, color: 'text-teal-400' },
-  { name: 'Sequoia', days: 365, color: 'text-cyan-400' },
+  { name: 'Sapling', days: 30, color: 'text-green-500' },
+  { name: 'Evergreen', days: 90, color: 'text-emerald-500' },
+  { name: 'Redwood', days: 180, color: 'text-teal-400' },
 ];
 
 export default function LandingPage() {

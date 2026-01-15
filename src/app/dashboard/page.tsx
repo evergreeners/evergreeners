@@ -5,6 +5,7 @@ import { StreaksCard } from '@/components/dashboard/streaks-card';
 import { ActivityCharts } from '@/components/dashboard/activity-charts';
 import { ActivityHeatmap } from '@/components/dashboard/activity-heatmap';
 import { AnimatedSection } from '@/components/landing/animated-section';
+import { AssignedTasks } from '@/components/dashboard/assigned-tasks';
 
 export const metadata = {
   title: 'Dashboard | Evergreeners',
@@ -41,9 +42,11 @@ export default function DashboardPage() {
              <ActivityHeatmap activity={mockActivity} />
           </div>
           <div className="lg:col-span-2">
-            <ActivityCharts activity={mockActivity} />
+            <AssignedTasks />
           </div>
         </div>
+
+        <ActivityCharts activity={mockActivity} />
       </div>
     </AppLayout>
   );

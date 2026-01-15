@@ -22,11 +22,11 @@ export function ActivityHeatmap({ activity }: ActivityHeatmapProps) {
   const firstDayOfMonth = getDay(yearStart);
 
   const getIntensityClass = (count: number) => {
-    if (count === 0) return 'bg-muted/50';
-    if (count < 3) return 'bg-primary/20';
-    if (count < 6) return 'bg-primary/40';
-    if (count < 10) return 'bg-primary/60';
-    return 'bg-primary/90';
+    if (count === 0) return 'bg-git-0';
+    if (count < 3) return 'bg-git-1';
+    if (count < 6) return 'bg-git-2';
+    if (count < 10) return 'bg-git-3';
+    return 'bg-git-4';
   };
   
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
