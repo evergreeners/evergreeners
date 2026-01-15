@@ -4,9 +4,7 @@ import { ActivityHeatmap } from '@/components/dashboard/activity-heatmap';
 import { StreaksCard } from '@/components/dashboard/streaks-card';
 import { mockActivity, mockUser } from '@/lib/mock-data';
 import { calculateStreaks } from '@/lib/streaks';
-import { AssignedTasks } from '@/components/dashboard/assigned-tasks';
 import { format, parseISO } from 'date-fns';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 export const metadata = {
   title: 'Dashboard | Evergreeners',
@@ -31,6 +29,7 @@ export default function DashboardPage() {
   return (
     <AppLayout>
       <div className="flex flex-col gap-8">
+        <h1 className="text-3xl font-bold tracking-tight">Welcome back, Alex!</h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <StreaksCard title="Current Streak" value={currentStreak} unit="days" />
           <StreaksCard title="Longest Streak" value={longestStreak} unit="days" />

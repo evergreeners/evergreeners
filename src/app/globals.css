@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    /* LIGHT MODE */
-    --background: 0 0% 100%;       /* #ffffff */
+    /* LIGHT MODE - Based on a GitHub-like aesthetic */
+    --background: 220 14% 96%;   /* #f6f8fa - Almost white */
     --foreground: 216 28% 7%;      /* #0d1117 (Almost black) */
 
     --card: 0 0% 100%;
@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 216 28% 7%;
  
-    --primary: 158 60% 22%;      /* #11573b - Darker Evergreen */
+    --primary: 139 51% 42%;        /* #2ea043 - Vibrant Green */
     --primary-foreground: 0 0% 100%;
  
     --secondary: 210 40% 96.1%;
@@ -23,62 +23,62 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
  
-    --accent: 220 14% 96%;         /* #f6f8fa */
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 139 51% 42%;        /* Vibrant Green */
+    --accent-foreground: 0 0% 100%;
  
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 213 27% 84%;         /* #d0d7de */
     --input: 213 27% 84%;
-    --ring: 158 60% 32%;
+    --ring: 139 51% 42%;
  
-    --radius: 0.375rem; /* 6px */
+    --radius: 0.5rem; /* 8px */
     
     --git-0: 220 14% 93%; /* #ebedf0 */
-    --git-1: 137 45% 72%; /* #8ccb9b */
-    --git-2: 135 55% 51%; /* #38b153 */
-    --git-3: 134 62% 35%; /* #228437 */
-    --git-4: 134 62% 26%; /* #196127 */
+    --git-1: 137 45% 72%; /* #9be9a8 */
+    --git-2: 139 51% 52%; /* #40c463 */
+    --git-3: 139 51% 42%; /* #30a14e */
+    --git-4: 139 51% 32%; /* #216e39 */
   }
  
   .dark {
-    /* EVERGREENERS DARK MODE */
-    --background: 220 13% 10%;    /* #14161a */
+    /* GITHUB DARK MODE */
+    --background: 222 47% 11%;    /* #0d1117 - Rich Black */
     --foreground: 210 29% 93%;    /* #e6edf3 */
 
-    --card: 215 21% 11%;          /* #161b22 */
+    --card: 222 40% 14%;          /* #161b22 */
     --card-foreground: 210 29% 93%;
  
-    --popover: 215 21% 11%;
+    --popover: 222 40% 14%;
     --popover-foreground: 210 29% 93%;
  
-    --primary: 158 60% 22%;      /* #11573b - Darker Evergreen */
+    --primary: 139 51% 42%;        /* #2ea043 - Vibrant Green */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 15% 15%; 
+    --secondary: 222 24% 18%;     /* #21262d */
     --secondary-foreground: 210 29% 93%;
  
-    --muted: 213 12% 21%;
+    --muted: 222 24% 18%;
     --muted-foreground: 212 11% 55%; /* #8b949e */
  
-    --accent: 213 12% 21%;
-    --accent-foreground: 210 29% 93%;
+    --accent: 139 51% 42%;         /* Vibrant Green */
+    --accent-foreground: 0 0% 100%;
  
-    --destructive: 348 88% 39%;
+    --destructive: 359 78% 59%;   /* #f85149 */
     --destructive-foreground: 210 40% 98%;
  
-    --border: 213 12% 21%;
-    --input: 213 12% 21%;
+    --border: 222 20% 22%;       /* #30363d */
+    --input: 222 20% 22%;
     
-    --ring: 158 60% 32%;
+    --ring: 139 51% 42%;
     
     /* Contribution graph colors for dark mode */
-    --git-0: 215 21% 11%; /* #161b22 */
-    --git-1: 134 62% 16%; /* #0e4429 */
-    --git-2: 135 100% 20%; /* #006d32 */
-    --git-3: 139 51% 32%; /* #208434 */
-    --git-4: 142 63% 45%; /* #2ea043 */
+    --git-0: 222 40% 14%; /* #161b22 */
+    --git-1: 139 51% 22%; /* #0e4429 */
+    --git-2: 139 51% 32%; /* #006d32 */
+    --git-3: 139 51% 42%; /* #239a3b */
+    --git-4: 139 51% 52%; /* #39d353 */
   }
 }
  
