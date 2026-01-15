@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { GitCommit, ShieldCheck, ShieldAlert, CalendarClock, UserCheck, Crown, Shield } from 'lucide-react';
+import { GitCommit, ShieldCheck, ShieldAlert, CalendarClock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -26,7 +26,7 @@ const RuleCard = ({ icon, title, description, isWarning }: { icon: React.ReactNo
 
 const RankBadge = ({ title, description, locked = true }: { title: string, description: string, locked?: boolean }) => (
     <div className="flex flex-col items-center">
-        <Badge variant={locked ? 'secondary' : 'default'} className={`h-12 px-6 text-lg ${locked ? 'text-muted-foreground' : 'bg-lime-500/80 text-black animate-pulse'}`}>
+        <Badge variant={locked ? 'secondary' : 'default'} className={`h-12 px-6 text-lg ${locked ? 'text-muted-foreground' : 'bg-lime-500/80 text-black'}`}>
             {title}
         </Badge>
         <p className="mt-2 text-sm text-muted-foreground">{description}</p>
@@ -39,7 +39,7 @@ const DemoCarousel = () => (
         <CarouselContent>
             <CarouselItem>
                 <div className="p-1">
-                    <Card className="shadow-2xl overflow-hidden bg-transparent">
+                    <Card className="shadow-2xl overflow-hidden bg-transparent border-primary/20">
                         <CardContent className="flex flex-col items-center justify-center p-6">
                             <h3 className="text-2xl font-bold text-primary mb-4 font-code">The Proof is in the Grid.</h3>
                             <p className="text-center text-muted-foreground mb-6">Your entire season, visualized. Every day is a verdict.</p>
@@ -57,7 +57,7 @@ const DemoCarousel = () => (
             </CarouselItem>
             <CarouselItem>
                 <div className="p-1">
-                    <Card className="shadow-2xl overflow-hidden bg-transparent">
+                    <Card className="shadow-2xl overflow-hidden bg-transparent border-primary/20">
                         <CardContent className="flex flex-col items-center justify-center p-6">
                             <h3 className="text-2xl font-bold text-primary mb-4 font-code">The Streak is Everything.</h3>
                              <p className="text-center text-muted-foreground mb-6">Current. Longest. The numbers don't lie.</p>
@@ -112,7 +112,7 @@ export default function LandingPage() {
         </section>
         
         {/* Demo Section */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto">
             <DemoCarousel />
           </div>
@@ -120,6 +120,11 @@ export default function LandingPage() {
 
         {/* The Rules Section */}
         <section className="container mx-auto px-4 py-20 sm:py-28">
+          <div className="text-center mb-12">
+             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
+              The Laws of the System
+            </h2>
+          </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <RuleCard
               icon={<ShieldCheck size={32} />}
@@ -146,8 +151,9 @@ export default function LandingPage() {
              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
               The Ranks
             </h2>
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">Titles earned by survival.</p>
             <div className="mt-10 flex w-full max-w-3xl justify-around gap-4">
-                <RankBadge title="Daywalker" description="7-Day Streak" locked={true} />
+                <RankBadge title="Daywalker" description="7-Day Streak" />
                 <RankBadge title="Mainliner" description="14-Day Streak" locked={true} />
                 <RankBadge title="Unbroken" description="30-Day Streak" locked={true} />
             </div>
