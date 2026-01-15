@@ -43,8 +43,8 @@
   }
  
   .dark {
-    /* GITHUB DARK MODE */
-    --background: 222 47% 11%;    /* #0d1117 - Rich Black */
+    /* GITHUB DARK MODE - Dark, Bright, and Captivating */
+    --background: 222 47% 10%;    /* #0d1117 - Richer Black */
     --foreground: 210 29% 93%;    /* #e6edf3 */
 
     --card: 222 40% 14%;          /* #161b22 */
@@ -53,7 +53,7 @@
     --popover: 222 40% 14%;
     --popover-foreground: 210 29% 93%;
  
-    --primary: 139 51% 42%;        /* Bright Green */
+    --primary: 139 65% 45%;        /* More vibrant, "electric" green */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 222 24% 18%;     /* #21262d */
@@ -62,7 +62,7 @@
     --muted: 222 24% 18%;
     --muted-foreground: 212 11% 55%; /* #8b949e */
  
-    --accent: 139 51% 32%;         /* Darker Green for accents on dark mode */
+    --accent: 139 60% 35%;         /* Darker, but still vibrant green */
     --accent-foreground: 0 0% 100%;
  
     --destructive: 359 78% 59%;   /* #f85149 */
@@ -71,14 +71,14 @@
     --border: 222 20% 22%;       /* #30363d */
     --input: 222 20% 22%;
     
-    --ring: 139 51% 42%;
+    --ring: 139 65% 45%;
     
     /* Contribution graph colors for dark mode */
     --git-0: 222 40% 14%; /* #161b22 */
     --git-1: 139 51% 22%; /* #0e4429 */
     --git-2: 139 51% 32%; /* #006d32 */
     --git-3: 139 51% 42%; /* #239a3b */
-    --git-4: 139 51% 52%; /* #39d353 */
+    --git-4: 139 60% 55%; /* Brighter final step */
   }
 }
  
