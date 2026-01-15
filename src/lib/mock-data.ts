@@ -12,6 +12,17 @@ export type Activity = {
   count: number;
 };
 
+export type AdminUser = {
+  id: string;
+  name: string;
+  username: string;
+  avatarUrl: string;
+  role: 'Admin' | 'Member';
+  assignedTasks: number;
+  progress: number;
+  badges: string[];
+};
+
 export const mockUser: User = {
   name: 'Alex Evergreen',
   username: 'alexevergreen',
@@ -52,3 +63,11 @@ const generateActivityData = (): Activity[] => {
 };
 
 export const mockActivity: Activity[] = generateActivityData();
+
+export const mockAdminUsers: AdminUser[] = [
+  { id: 'usr_1', name: 'Alex Evergreen', username: 'alexevergreen', avatarUrl: 'https://picsum.photos/seed/100/200/200', role: 'Admin', assignedTasks: 5, progress: 80, badges: ['Sprout', '30-Day Streak'] },
+  { id: 'usr_2', name: 'Brenda Birch', username: 'brendab', avatarUrl: 'https://picsum.photos/seed/101/200/200', role: 'Member', assignedTasks: 8, progress: 65, badges: ['Sprout'] },
+  { id: 'usr_3', name: 'Charlie Cedar', username: 'cedar_dev', avatarUrl: 'https://picsum.photos/seed/102/200/200', role: 'Member', assignedTasks: 3, progress: 100, badges: ['Sprout', 'Repo Contributor'] },
+  { id: 'usr_4', name: 'Diana Douglas-Fir', username: 'dianadf', avatarUrl: 'https://picsum.photos/seed/103/200/200', role: 'Member', assignedTasks: 12, progress: 40, badges: [] },
+  { id: 'usr_5', name: 'Ethan Elm', username: 'e_elm', avatarUrl: 'https://picsum.photos/seed/104/200/200', role: 'Member', assignedTasks: 6, progress: 90, badges: ['Sprout', 'Sapling'] },
+];

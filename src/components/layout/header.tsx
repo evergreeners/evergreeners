@@ -2,12 +2,13 @@
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { ThemeToggle } from '../theme-toggle';
 import { usePathname } from 'next/navigation';
-import { Home, Settings, Target } from 'lucide-react';
+import { Home, Settings, Target, Shield } from 'lucide-react';
 
 const pathToTitle: { [key: string]: { title: string, icon: React.ReactNode } } = {
   '/dashboard': { title: 'Dashboard', icon: <Home className="h-5 w-5" /> },
   '/goals': { title: 'Goals', icon: <Target className="h-5 w-5" /> },
   '/profile': { title: 'Profile', icon: <Settings className="h-5 w-5" /> },
+  '/admin': { title: 'Admin', icon: <Shield className="h-5 w-5" /> },
 };
 
 export function Header() {

@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
 } from '../ui/sidebar';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { Home, Settings, Target } from 'lucide-react';
+import { Home, Settings, Target, Shield } from 'lucide-react';
 import Link from 'next/link';
 import { Separator } from '../ui/separator';
 import { mockUser } from '@/lib/mock-data';
@@ -19,6 +19,7 @@ const menuItems = [
   { href: '/dashboard', label: 'Dashboard', icon: Home },
   { href: '/goals', label: 'Goals', icon: Target },
   { href: '/profile', label: 'Profile', icon: Settings },
+  { href: '/admin', label: 'Admin', icon: Shield },
 ];
 
 export function SidebarNav() {
