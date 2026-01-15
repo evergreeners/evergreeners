@@ -43,9 +43,6 @@ export default function DashboardPage() {
           </div>
           <ActivityCharts activity={mockActivity} />
         </div>
-         <div className="grid grid-cols-1 gap-6">
-            <AssignedTasks />
-        </div>
       </div>
     </AppLayout>
   );

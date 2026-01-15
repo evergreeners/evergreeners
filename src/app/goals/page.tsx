@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
 import { PlusCircle, Target } from 'lucide-react';
+import { AssignedTasks } from '@/components/dashboard/assigned-tasks';
 
 type Goal = {
   id: number;
@@ -78,6 +79,9 @@ export default function GoalsPage() {
                   <Button className="w-full">Add Goal</Button>
               </CardFooter>
            </Card>
+        </div>
+        <div className="grid grid-cols-1 gap-6">
+            <AssignedTasks />
         </div>
       </div>
     </AppLayout>

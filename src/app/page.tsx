@@ -6,16 +6,16 @@ import { Sprout, GitCommitVertical, Trees, Mountain } from 'lucide-react';
 
 const rules = [
   {
-    title: 'The First Rule',
-    description: 'Public accountability is the only rule. Your streak is public.',
+    title: 'Commit Daily',
+    description: 'Consistency is key. Make a commit every single day to maintain your streak.',
   },
   {
-    title: 'The Second Rule',
-    description: 'Commit every day. A single day missed resets your streak to zero.',
+    title: 'Stay Public',
+    description: 'Embrace accountability. Your progress and streaks are visible to the community.',
   },
   {
-    title: 'The Third Rule',
-    description: 'The season ends. Streaks are reset. Glory is eternal.',
+    title: 'Embrace the Season',
+    description: 'All streaks reset at the end of the season, offering a fresh start for everyone.',
   },
 ];
 
@@ -42,10 +42,10 @@ export default function LandingPage() {
       <main className="flex-1">
         <section className="flex min-h-[80vh] flex-col items-center justify-center text-center p-4">
           <h2 className="text-6xl sm:text-7xl font-bold tracking-tighter">
-            We Are Not Here to Impress
+            Cultivate Your Coding Habit
           </h2>
           <p className="mt-4 max-w-2xl text-lg tracking-wide text-muted-foreground">
-            We are here to build. To grow. To commit. This is not a popularity contest. This is a testament to your dedication, etched in the blockchain of your own effort.
+            Evergreeners helps you build a consistent coding practice. By tracking your daily GitHub commits, you can grow a streak, set goals, and watch your skills flourish over time.
           </p>
           <div className="mt-8">
             <Button size="lg" className="text-base font-bold shadow-lg shadow-primary/20">
@@ -57,8 +57,8 @@ export default function LandingPage() {
         <AnimatedSection as="section" className="py-16 sm:py-24 bg-card/50">
           <div className="container mx-auto max-w-5xl">
              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold tracking-tighter">The Rules Are Simple</h2>
-                <p className="mt-2 text-lg text-muted-foreground">Three laws to live by.</p>
+                <h2 className="text-4xl font-bold tracking-tighter">How It Works</h2>
+                <p className="mt-2 text-lg text-muted-foreground">Follow three simple principles.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {rules.map((rule, index) => (
