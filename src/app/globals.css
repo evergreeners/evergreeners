@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 216 28% 7%;
  
-    --primary: 139 51% 42%;        /* #2ea043 - Vibrant Green */
+    --primary: 139 51% 32%;        /* Darker Green */
     --primary-foreground: 0 0% 100%;
  
     --secondary: 210 40% 96.1%;
@@ -23,7 +23,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
  
-    --accent: 139 51% 42%;        /* Vibrant Green */
+    --accent: 139 51% 32%;        /* Darker Green */
     --accent-foreground: 0 0% 100%;
  
     --destructive: 0 84.2% 60.2%;
@@ -31,15 +31,15 @@
 
     --border: 213 27% 84%;         /* #d0d7de */
     --input: 213 27% 84%;
-    --ring: 139 51% 42%;
+    --ring: 139 51% 32%;
  
     --radius: 0.5rem; /* 8px */
     
     --git-0: 220 14% 93%; /* #ebedf0 */
     --git-1: 137 45% 72%; /* #9be9a8 */
     --git-2: 139 51% 52%; /* #40c463 */
-    --git-3: 139 51% 42%; /* #30a14e */
-    --git-4: 139 51% 32%; /* #216e39 */
+    --git-3: 139 51% 32%; /* #216e39 - Darkened */
+    --git-4: 139 51% 22%; /* #134b22 - Even Darker */
   }
  
   .dark {
@@ -53,7 +53,7 @@
     --popover: 222 40% 14%;
     --popover-foreground: 210 29% 93%;
  
-    --primary: 139 51% 42%;        /* #2ea043 - Vibrant Green */
+    --primary: 139 51% 32%;        /* Darker Green */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 222 24% 18%;     /* #21262d */
@@ -62,7 +62,7 @@
     --muted: 222 24% 18%;
     --muted-foreground: 212 11% 55%; /* #8b949e */
  
-    --accent: 139 51% 42%;         /* Vibrant Green */
+    --accent: 139 51% 32%;         /* Darker Green */
     --accent-foreground: 0 0% 100%;
  
     --destructive: 359 78% 59%;   /* #f85149 */
@@ -71,12 +71,12 @@
     --border: 222 20% 22%;       /* #30363d */
     --input: 222 20% 22%;
     
-    --ring: 139 51% 42%;
+    --ring: 139 51% 32%;
     
     /* Contribution graph colors for dark mode */
     --git-0: 222 40% 14%; /* #161b22 */
     --git-1: 139 51% 22%; /* #0e4429 */
-    --git-2: 139 51% 32%; /* #006d32 */
+    --git-2: 139 51% 32%; /* #006d32 - Now the same as primary */
     --git-3: 139 51% 42%; /* #239a3b */
     --git-4: 139 51% 52%; /* #39d353 */
   }
