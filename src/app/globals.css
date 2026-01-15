@@ -44,44 +44,35 @@
   }
  
   .dark {
-    /* GITHUB DARK MODE */
-    
-    /* Background: #0d1117 (GitHub Dark Bg) */
-    --background: 216 28% 7%;      
-    /* Text: #e6edf3 (GitHub Light Text) */
-    --foreground: 210 29% 93%;     
+    /* EVERGREENERS DARK MODE */
+    --background: 220 13% 10%;    /* #14161a */
+    --foreground: 210 29% 93%;    /* #e6edf3 */
 
-    /* Card/Sidebar: #161b22 (GitHub Panel Bg) */
-    --card: 215 21% 11%;           
+    --card: 215 21% 11%;          /* #161b22 */
     --card-foreground: 210 29% 93%;
  
     --popover: 215 21% 11%;
     --popover-foreground: 210 29% 93%;
  
-    /* PRIMARY: #238636 (GitHub Green Button) */
-    --primary: 134 62% 36%; 
-    --primary-foreground: 0 0% 100%; /* White text on green button */
- 
-    /* SECONDARY: #21262d (GitHub Secondary Button) */
+    --primary: 158 52% 30%;      /* #1c6b4b */
+    --primary-foreground: 0 0% 100%;
+
     --secondary: 214 15% 15%; 
     --secondary-foreground: 210 29% 93%;
  
-    /* MUTED: #30363d (Borders/Subtle) */
     --muted: 213 12% 21%;
     --muted-foreground: 212 11% 55%; /* #8b949e */
  
-    --accent: 213 12% 21%;         /* Hover state on lists */
+    --accent: 213 12% 21%;
     --accent-foreground: 210 29% 93%;
  
-    --destructive: 348 88% 39%;    /* #a40e26 */
+    --destructive: 348 88% 39%;
     --destructive-foreground: 210 40% 98%;
  
-    /* BORDER: #30363d (Standard GitHub Dark Border) */
     --border: 213 12% 21%;
     --input: 213 12% 21%;
     
-    /* RING: #2ea043 (Focus Ring Green) */
-    --ring: 131 55% 40%;
+    --ring: 158 52% 40%;
     
     /* Contribution graph colors for dark mode */
     --git-0: 215 21% 11%; /* #161b22 */
