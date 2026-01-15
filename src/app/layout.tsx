@@ -24,12 +24,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className={cn('font-body antialiased')}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
           <Toaster />
         </ThemeProvider>
