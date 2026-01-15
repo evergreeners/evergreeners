@@ -12,7 +12,7 @@ export function Logo({ className }: { className?: string }) {
     >
       <rect width="36" height="36" fill="currentColor" />
       <path
-        d="M12 0V36M24 0V36M0 12H36M0 24H36"
+        d="M9 0V36M18 0V36M27 0V36M0 9H36M0 18H36M0 27H36"
         stroke="hsl(var(--background))"
         strokeWidth="2"
       />
