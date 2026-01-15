@@ -5,10 +5,6 @@ import { UserCard } from '@/components/admin/user-card';
 import { UserTasksDialog } from '@/components/admin/user-tasks-dialog';
 import { mockAdminUsers, type AdminUserWithTasks } from '@/lib/mock-data';
 
-export const metadata = {
-  title: 'Admin Panel | Evergreeners',
-};
-
 export default function AdminPage() {
   const [users, setUsers] = useState<AdminUserWithTasks[]>(mockAdminUsers);
   const [selectedUser, setSelectedUser] = useState<AdminUserWithTasks | null>(null);
