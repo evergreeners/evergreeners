@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
 import { PlusCircle, Target } from 'lucide-react';
+import { AssignedTasks } from '@/components/dashboard/assigned-tasks';
 
 type Goal = {
   id: number;
@@ -35,6 +36,9 @@ export default function GoalsPage() {
             New Goal
           </Button>
         </div>
+        
+        <AssignedTasks />
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {goals.map(goal => (
             <Card key={goal.id}>
