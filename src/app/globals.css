@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 216 28% 7%;
  
-    --primary: 158 52% 30%;      /* #1c6b4b - Evergreen */
+    --primary: 158 60% 22%;      /* #11573b - Darker Evergreen */
     --primary-foreground: 0 0% 100%;
  
     --secondary: 210 40% 96.1%;
@@ -31,7 +31,7 @@
 
     --border: 213 27% 84%;         /* #d0d7de */
     --input: 213 27% 84%;
-    --ring: 158 52% 40%;
+    --ring: 158 60% 32%;
  
     --radius: 0.375rem; /* 6px */
     
@@ -53,7 +53,7 @@
     --popover: 215 21% 11%;
     --popover-foreground: 210 29% 93%;
  
-    --primary: 158 52% 30%;      /* #1c6b4b */
+    --primary: 158 60% 22%;      /* #11573b - Darker Evergreen */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 214 15% 15%; 
@@ -71,7 +71,7 @@
     --border: 213 12% 21%;
     --input: 213 12% 21%;
     
-    --ring: 158 52% 40%;
+    --ring: 158 60% 32%;
     
     /* Contribution graph colors for dark mode */
     --git-0: 215 21% 11%; /* #161b22 */
