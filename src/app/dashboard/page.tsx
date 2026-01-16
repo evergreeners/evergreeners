@@ -5,6 +5,7 @@ import { StreaksCard } from '@/components/dashboard/streaks-card';
 import { mockActivity, mockUser } from '@/lib/mock-data';
 import { calculateStreaks } from '@/lib/streaks';
 import { format, parseISO } from 'date-fns';
+import { Leaderboard } from '@/components/dashboard/leaderboard';
 
 export const metadata = {
   title: 'Dashboard | Evergreeners',
@@ -41,6 +42,9 @@ export default function DashboardPage() {
              <ActivityHeatmap activity={mockActivity} />
           </div>
           <ActivityCharts activity={mockActivity} />
+        </div>
+        <div className="grid grid-cols-1 gap-6">
+          <Leaderboard />
         </div>
       </div>
     </AppLayout>

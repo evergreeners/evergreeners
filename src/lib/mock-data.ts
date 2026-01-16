@@ -33,6 +33,15 @@ export type AdminUserWithTasks = AdminUser & {
   tasks: Task[];
 };
 
+export type LeaderboardUser = {
+  id: string;
+  name: string;
+  username: string;
+  avatarUrl: string;
+  streak: number;
+  rank: string;
+};
+
 export const mockUser: User = {
   name: 'Alex Evergreen',
   username: 'alexevergreen',
@@ -105,3 +114,14 @@ export const mockAdminUsers: AdminUserWithTasks[] = [
   { id: 'usr_4', name: 'Diana Douglas-Fir', username: 'dianadf', avatarUrl: 'https://picsum.photos/seed/103/200/200', role: 'Member', badges: [], tasks: generateTasksForUser('Diana Douglas-Fir', 12) },
   { id: 'usr_5', name: 'Ethan Elm', username: 'e_elm', avatarUrl: 'https://picsum.photos/seed/104/200/200', role: 'Member', badges: ['Sprout', 'Sapling'], tasks: generateTasksForUser('Ethan Elm', 6) },
 ];
+
+
+export const mockLeaderboardUsers: LeaderboardUser[] = [
+  { id: 'usr_1', name: 'Alex Evergreen', username: 'alexevergreen', avatarUrl: 'https://picsum.photos/seed/100/200/200', streak: 121, rank: 'Evergreen' },
+  { id: 'usr_5', name: 'Ethan Elm', username: 'e_elm', avatarUrl: 'https://picsum.photos/seed/104/200/200', streak: 95, rank: 'Evergreen' },
+  { id: 'usr_10', name: 'Frank Fir', username: 'frank_fir', avatarUrl: 'https://picsum.photos/seed/109/200/200', streak: 78, rank: 'Sapling' },
+  { id: 'usr_2', name: 'Brenda Birch', username: 'brendab', avatarUrl: 'https://picsum.photos/seed/101/200/200', streak: 54, rank: 'Sapling' },
+  { id: 'usr_3', name: 'Charlie Cedar', username: 'cedar_dev', avatarUrl: 'https://picsum.photos/seed/102/200/200', streak: 32, rank: 'Sapling' },
+  { id: 'usr_7', name: 'Grace Grove', username: 'g_grove', avatarUrl: 'https://picsum.photos/seed/106/200/200', streak: 15, rank: 'Sprout' },
+  { id: 'usr_4', name: 'Diana Douglas-Fir', username: 'dianadf', avatarUrl: 'https://picsum.photos/seed/103/200/200', streak: 8, rank: 'Sprout' },
+].sort((a, b) => b.streak - a.streak);
